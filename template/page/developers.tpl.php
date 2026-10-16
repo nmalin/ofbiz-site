@@ -8,7 +8,7 @@
       <div class="container clearfix">
         <div class="row">
           <h1 class="span8">Getting Started - Developers</h1>
-          <div class="span4" id="navTrail"> <a href="index.html" class="homeLink">home</a><span>/</span><a href="">Getting Started</a><span>/</span><span class="current">Developers</span> </div>
+          <div class="span4" id="navTrail"> <a href="<?= $base_url ?>index.html" class="homeLink">home</a><span>/</span><a href="">Getting Started</a><span>/</span><span class="current">Developers</span> </div>
         </div>
       </div>
     </header>
@@ -34,8 +34,7 @@
                 <h2>Pre-Requisites</h2>
                 <div class="divider"><span></span></div>
      <ul class="iconsList">
-      <li><i class="icon-pin"></i> For the ofbiz-framework trunk and ofbiz-plugins trunk the minimum requirement you need installed is Java 17 JDK (the full JDK, not just the JRE). Make sure to set the <code>$JAVA_HOME</code> environment variable.</li>
-      <li><i class="icon-pin"></i> For release 18.12, the minimum requirement is Java 11 JDK.</li>
+      <li><i class="icon-pin"></i> For the ofbiz-framework trunk, ofbiz-plugins trunk, and release24.09 the minimum requirement you need installed is Java 17 JDK (the full JDK, not just the JRE). Make sure to set the <code>$JAVA_HOME</code> environment variable.</li>
       <li><i class="icon-pin"></i> Apache OFBiz can be downloaded and run on both Unix based and Windows based systems.</li>
       <li><i class="icon-pin"></i> On Windows, a PowerShell version &gt;= 7.1.3 is required (needed by the Gradle wrapper initialization script).</li>
       <li><i class="icon-pin"></i> On Windows, do not install OFBiz in a directory whose path contains spaces.</li>
@@ -49,7 +48,7 @@
                 <div class="divider"><span></span></div>
                 <p>There are two ways to download the OFBiz source code</p>
     <h3>1. Using a Download Mirror</h3>
-    <p>Download your required version from one of our <a href="download.html">download mirrors</a> and extract the zip file </p>
+    <p>Download your required version from one of our <a href="<?= $base_url ?>download.html">download mirrors</a> and extract the zip file </p>
     <h3>2. Checkout the Source Code</h3>
     <p>Checkout the source code from the repository</p>
     <p>Anyone can checkout or <a href="#DevRepo">browse the source code</a> in the OFBiz GitHub repositories.</p>
@@ -58,13 +57,13 @@
 <ul class="iconsList">
   <li><i class="icon-pin"></i> <strong>ofbiz-framework trunk</strong> : <code>$ git clone https://github.com/apache/ofbiz-framework.git ofbiz-framework </code></li>
   <li><i class="icon-pin"></i> <strong>ofbiz-plugins trunk</strong> : <code>$ git clone https://github.com/apache/ofbiz-plugins.git plugins </code></li>
-  <li><i class="icon-pin"></i> <strong>branch release18.12 (stable)</strong>: <code>$ git clone https://github.com/apache/ofbiz-framework.git ofbiz-framework</code></li>
+  <li><i class="icon-pin"></i> <strong>branch release24.09 (stable)</strong>: <code>$ git clone https://github.com/apache/ofbiz-framework.git ofbiz-framework</code></li>
   <li>If you don't want to use the HEAD version (Git default, with last bug fixes), you can update the tags before.
-      <br>You can refer to the <a href="download.html">site download page</a> for the stable version to use.
-      <br>Note that you need to add "release"in the name  before, like in "release18.12.10", eg with releaseVersionNumber as a var:
+      <br>You can refer to the <a href="<?= $base_url ?>download.html">site download page</a> for the stable version to use.
+      <br>Note that you need to add "release"in the name  before, like in "release24.09.07", eg with releaseVersionNumber as a var:
       <br><code>git fetch --all --tags</code>
       <br><code>$ git checkout releaseVersionNumber</code></li>
-  <li><i class="icon-pin"></i> <strong>branch release18.12 (stable)</strong>: <code>$ git clone https://github.com/apache/ofbiz-plugins.git ofbiz-plugins</code></li>
+  <li><i class="icon-pin"></i> <strong>branch release24.09 (stable)</strong>: <code>$ git clone https://github.com/apache/ofbiz-plugins.git ofbiz-plugins</code></li>
   <li><code>$ git checkout releaseVersionNumber</code></li>
 </ul>
 
@@ -88,21 +87,14 @@
                 <h2>Build and Run</h2>
                 <div class="divider"><span></span></div>
                 <p>Once you have downloaded the source code and (for trunk) initialized the Gradle wrapper, it will need to be built.</p>
-    <h3>Building the Trunk</h3>
-    <p>To build the trunk, navigate to the framework-trunk directory and;</p>
+    <h3>Building the Trunk or Release 24.09</h3>
+    <p>To build the trunk or the release24.09 branch, navigate to the framework-trunk directory and;</p>
     <p>Run the following command for Unix-like OS</p>
     <code>./gradlew cleanAll loadAll</code><p></p>
     <p>Run the following command for MS Windows</p>
     <code>gradlew cleanAll loadAll</code>
     <p></p>
-    <h3>Building Release 18.12</h3>
-    <p>To build 18.12 release, navigate to the OFBiz or framework-trunk directory and;</p>
-    <p>Run the following command for Unix-like OS</p>
-    <code>./gradlew cleanAll loadDefault</code><p></p>
-    <p>Run the following command for MS Windows</p>
-    <code>gradlew cleanAll loadDefault</code>
-    <p></p>
-    <h3>Starting and Running the ofbiz-framework trunk or 18.12</h3>
+    <h3>Starting and Running the ofbiz-framework trunk or Release 24.09</h3>
     <p>To start OFBiz running locally, navigate to the trunk directory and;</p>
     <p>Run the following command for Unix-like OS</p>
     <code>./gradlew ofbiz</code><p></p>
@@ -187,7 +179,7 @@
               <div class="span10">
                 <h2>Demo</h2>
                 <div class="divider"><span></span></div>
-                <p>Try out our OFBiz demo - <a href="ofbiz-demos.html"><strong>OFBiz Demos</strong></a></p>
+                <p>Try out our OFBiz demo - <a href="<?= $base_url ?>ofbiz-demos.html"><strong>OFBiz Demos</strong></a></p>
             </div>
             </section>
           </div>

@@ -1,0 +1,243 @@
+<?php //Variable declarations for region templates
+  $head_title = '<title>The Apache OFBiz&reg; Project - Release Notes 24.09.08</title>';
+?>
+ <!-- page content -->
+ <section id="content" class="fullWidth">
+    <header class="headerPage">
+      <div class="container clearfix">
+        <div class="row">
+          <h1 class="span8">Release Notes 24.09.08</h1>
+           <div class="span4" id="navTrail">
+               <a href="<?= $base_url ?>index.html" class="homeLink">home</a>
+               <span>/</span>
+               <a href="<?= $base_url ?>download.html">Download</a>
+               <span>/</span><span class="current">Release Notes 24.09.08</span>
+           </div>
+      </div>
+      </div>
+    </header>
+  <section id="content" class="features" >
+  <div class="slice clearfix">
+      <div class="container">
+<div class="row">
+  <div>
+  <p>Apache OFBiz&reg; 24.09.08, released in June 2026, is the seventh release of the 24.09 series, which has been feature-frozen since September 2024, receiving only bug fixes.</p>
+
+        <h2>Release Notes - OFBiz - Version 24.09.08</h2>
+<ul>
+    <li> Fixed: duplicate QuoteRole insertion error in copyQuote service (OFBIZ-13436) by @chandan-khandelwal in <a href="https://github.com/apache/ofbiz-framework/pull/1347">PR1347</a></li>
+    <li> Backport PR #1360: 'Fixed: Disable Quick Receive and Receive buttons on the Order View page when a PO has multiple ship groups (OFBIZ-13442)' by @golja in <a href="https://github.com/apache/ofbiz-framework/pull/1361">PR1361</a></li>
+    <li> OFBIZ-13402 Move test sources from src/main/groovy to src/test/groovy (release24.09) by @toaditi in <a href="https://github.com/apache/ofbiz-framework/pull/1353">PR1353</a></li>
+    <li> Backport pr 1388: Improved: Simplify handling of hidden fields in order search form by @jacopoc in <a href="https://github.com/apache/ofbiz-framework/pull/1389">PR1389</a></li>
+    <li> Backport pr 1393 - Fixed: Fix various display issues in the Order View and Receive Inventory screens for Purchase Orders by @golja in <a href="https://github.com/apache/ofbiz-framework/pull/1402">PR1402</a></li>
+    <li> Fixed: EntityExpr no longer hardcodes the "default" delegator when validating condition types (OFBIZ-5100) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1420">PR1420</a></li>
+    <li> Fixed: E-commerce search and product detail no longer leak products across catalogs (OFBIZ-4755) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1500">PR1500</a></li>
+    <li> Backport pr 1502 - Fixed: Add validation for product image file names in renameImage to prevent path traversal by @jacopoc in <a href="https://github.com/apache/ofbiz-framework/pull/1505">PR1505</a></li>
+    <li> Backport PR 1512 - Improved: hardens validation of screen location by @golja in <a href="https://github.com/apache/ofbiz-framework/pull/1528">PR1528</a></li>
+    <li> Fixed: Gift card purchase copyMe (BCC purchaser) can never work (OFBIZ-13464) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1504">PR1504</a></li>
+    <li> Fixed: OFBizTestCase-based integration tests never run on release24.09 (OFBIZ-13469) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1513">PR1513</a></li>
+    <li> Fixed: Gradle build failure in a linked git worktree (OFBIZ-13470) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1518">PR1518</a></li>
+    <li> Fixed: Reject shipments mixing ship groups with different destinations (OFBIZ-5346) (backport to release24.09) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1509">PR1509</a></li>
+    <li> Fixed: PAssed setIfEmpty True on updating Invoice header and Invoice … by @arunpati in <a href="https://github.com/apache/ofbiz-framework/pull/1536">PR1536</a></li>
+    <li> Fixed : Child communication event sorting. (OFBIZ-8152) by @rehan3586 in <a href="https://github.com/apache/ofbiz-framework/pull/1538">PR1538</a></li>
+    <li> Fixed: MissingMethodException thrown during the execution of the updateProductStore service when attempting to expire existing facilities. (OFBIZ-13472) by @chandan-khandelwal in <a href="https://github.com/apache/ofbiz-framework/pull/1539">PR1539</a></li>
+    <li> Fixed: PDF upload accepted embedded attachments when ZUGFeRD upload was disabled (OFBIZ-13485) (backport to release24.09) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1574">PR1574</a></li>
+    <li> Fixed: URLConnector.openUntrustedConnection(...) public overloads silently performed trusted SSL connections (OFBIZ-13484) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1570">PR1570</a></li>
+    <li> Fixed: Remove HOSTCERT_MIN_CHECK from SSLUtil (OFBIZ-13482) (backport to release24.09) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1560">PR1560</a></li>
+    <li> Fixed: Broken javamail-container sample in ofbiz-component.xml by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1551">PR1551</a></li>
+    <li> Fixed: sendFailureNotification NPEs on default sendFrom, masking the original SMTP error (OFBIZ-13477) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1549">PR1549</a></li>
+    <li> Fixed: MultiTrustManager doing flat cert-equality checks instead of real X.509 chain validation (OFBIZ-13476) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1546">PR1546</a></li>
+    <li> Fixed: isExecutable() mime-type comparisons never matched Tika's actual types (OFBIZ-13486) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1585">PR1585</a></li>
+    <li> Fixed: isExecutable() missed Tika's ELF sub-types, letting real Linux binaries through the check (OFBIZ-13486) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1601">PR1601</a></li>
+    <li> Fixed: HashMaps are not properly rendered in FTL with current FTL integration (OFBIZ-13164) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1616">PR1616</a></li>
+    <li> Fixed: noWebshellInMetadata NPEs when readMetadata can't parse the file by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1623">PR1623</a></li>
+    <li> Fixed: distTar/distZip ships unused Node.js runtime caches, bloating the distribution archive (OFBIZ-13491) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1631">PR1631</a></li>
+    <li> Improved: Authorization enforcement for HumanRes category tree data access (#1637) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1640">PR1640</a></li>
+    <li> Tighten how suffix-selected views resolve against their owning request map by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1645">PR1645</a></li>
+    <li> Improved: Enhance RequestHandler view state persistence and screen location resolution (#1624) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1653">PR1653</a></li>
+    <li> Fixed: ControlFilter's FreeMarker-interpolation guard was unreachable due to fail-open security check (OFBIZ-13492) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1642">PR1642</a></li>
+    <li> Restrict widget resource locations to component:// or an explicit allowlist (#1650) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1654">PR1654</a></li>
+    <li> Fix webtools Run Suite/Run Case: missing prerequisites and shared ambient transaction (#1655) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1656">PR1656</a></li>
+    <li> Improved: Validate tenant ID before creating a per-tenant delegator by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1663">PR1663</a></li>
+    <li> Improved: Add validation and permission check to replaceImageToExistImage service by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1672">PR1672</a></li>
+    <li> Improved: Add permission check and path validation to imageCrop and imageRotate services by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1676">PR1676</a></li>
+    <li> Improved: Add missing permission and path checks across ImageManagementServices methods by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1680">PR1680</a></li>
+    <li> Improved: Check path containment before invoking SecuredUpload.isValidFileName in isValidProductImageFileName by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1685">PR1685</a></li>
+    <li> Fixed: TaxAuthority lookup allows selecting parties without the TaxAuthority role (OFBIZ-12374) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1697">PR1697</a></li>
+    <li> Fix content visibility check in help screens (#1703) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1705">PR1705</a></li>
+    <li> Improved input handling and access control around the invoice email-aending flow by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1706">PR1706</a></li>
+    <li> Improved webtools data file viewer URL handling (#1707) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1708">PR1708</a></li>
+    <li> Improved externalLoginKey handling for cross-application navigation (…#1710) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1713">PR1713</a></li>
+    <li> Improved: escape link parameter values in MacroScreenRenderer.renderLink (#1711) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1715">PR1715</a></li>
+    <li> Improved: add permission and path checks to XmlDsDump.groovy (#1712) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1714">PR1714</a></li>
+    <li> Introducing upper bound for rowCount in MultiForm-Requests (#1691) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1716">PR1716</a></li>
+    <li> Improved: authorization checks on Catalog and Order Manager helper routes (#1717) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1728">PR1728</a></li>
+    <li> Improved: Align survey template location resolution with other widget/template loaders (#1730) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1732">PR1732</a></li>
+    <li> Improved: Build an explicit DocumentBuilder for XML-typed content rendering in ContentWorker (#1731) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1733">PR1733</a></li>
+    <li> Improved: Anchor content role-creation permission checks to the target content (#1734) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1737">PR1737</a></li>
+    <li> Improved: Reuse existing catalog permission checks for search-result bulk actions (#1735) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1738">PR1738</a></li>
+    <li> Improved: Anchor catalog quick-admin write events to their permission tier (#1739) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1740">PR1740</a></li>
+    <li> Improved: bind EntityFunction literal values as SQL parameters instead of inlining them (#1729) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1742">PR1742</a></li>
+    <li> Fixed: updateLayout authorizing under CONTENT_CREATE then updating unrelated records unchecked (#1745) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1746">PR1746</a></li>
+    <li> Fixed: unrestricted file destination in DataServices createFile/updateFile by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1748">PR1748</a></li>
+    <li> Fixed: CMS use-when expressions still templated into string literals by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1789">PR1789</a></li>
+    <li> Fixed: arbitrary service execution via Content.serviceName in ContentWorker by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1791">PR1791</a></li>
+    <li> Fixed: Bump ant-junit from 1.10.15 to 1.10.17 in build.gradle by @jacopoc in <a href="https://github.com/apache/ofbiz-framework/pull/1800">PR1800</a></li>
+    <li> Fixed: jQuery 4.0 migration broke legacy API usage in common-theme (OFBIZ-13510) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1830">PR1830</a></li>
+    <li> Fixed: jGrowl toast messages use wrong readmore-js option (OFBIZ-13512) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1832">PR1832</a></li>
+    <li> Fixed: Legacy jQuery.noConflict() in imagemanagement templates breaks common-theme JS (OFBIZ-13513) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1834">PR1834</a></li>
+    <li> Fixed: Service dispatcher local context race causes intermittent NullPointerException (OFBIZ-13508) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1822">PR1822</a></li>
+    <li> Improved: Replace commons-imaging with metadata-extractor + TwelveMonkeys ImageIO TIFF plugin (OFBIZ-13507) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1821">PR1821</a></li>
+    <li> Improved: Align tenant resolution between LoginWorker and ContextFilter (#1835) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1841">PR1841</a></li>
+    <li> Improved: Allow testIntegration to run with --portoffset for concurrent test runs (OFBIZ-13518) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1843">PR1843</a></li>
+    <li> Fixed: EntityEcaUtil cache-rebuild race under concurrent Delegator construction (OFBIZ-13517) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1840">PR1840</a></li>
+    <li> Fixed: externalLoginKey enable flag never checked, cannot be changed live (OFBIZ-13519) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1848">PR1848</a></li>
+    <li> Fixed: addOrderShipmentToShipment/getQuantityForShipment broken since the minilang-to-Groovy conversion (OFBIZ-13521) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1854">PR1854</a></li>
+    <li> Fixed: createOrderShipmentPlan leaks order items across ship groups (OFBIZ-13520) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1853">PR1853</a></li>
+    <li> Improved: Route the layout-image events through the permission-checked content services and tighten data resource template rendering (#1846) by @ashishvijaywargiya in <a href="https://github.com/apache/ofbiz-framework/pull/1857">PR1857</a></li>
+    <li> Improved: Bind externalLoginKey to its intended destination webapps instead of validating against any webapp on the server (OFBIZ-13522) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1856">PR1856</a></li>
+    <li> Fixed: CategoryContentServicesScript related-URL, SEO, and download-update regressions (OFBIZ-13548) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1863">PR1863</a></li>
+    <li> Fixed: createInvoiceItemPayrol crashes on Deduction/Tax amount entry (OFBIZ-13561) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1865">PR1865</a></li>
+    <li> Fixed: checkContentOperationSecurity crashes when content has a purpose assigned (OFBIZ-13535) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1867">PR1867</a></li>
+    <li> Fixed: ProductServices group-order, discontinuation, and review regressions (OFBIZ-13537) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1869">PR1869</a></li>
+    <li> Fixed: quickShipEntireOrder calls undefined errorMessage() instead of error() (OFBIZ-13564) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1872">PR1872</a></li>
+    <li> Fixed: ContentServices status-transition and content-creation regressions (OFBIZ-13540) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1873">PR1873</a></li>
+    <li> Fixed: CommunicationEventServices sender/recipient and status regressions (OFBIZ-13542) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1880">PR1880</a></li>
+    <li> Fixed: CheckoutServices anonymous-checkout party reattachment and createUpdatePerson new-party-id regressions (OFBIZ-13544) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1882">PR1882</a></li>
+    <li> Fixed: updateBlogEntry checks the wrong field for existing article text (OFBIZ-13545) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1884">PR1884</a></li>
+    <li> Fixed: updatePartyInvitation crashes when auto-deriving the invitee name (OFBIZ-13553) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1886">PR1886</a></li>
+    <li> Fixed: createUpdateCustomerAndShippingAddress leaves shipToAddressCtx.partyId stale after a new party is created (OFBIZ-13565) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1890">PR1890</a></li>
+    <li> Fixed: TaxAuthorityServices tax-ID validation and update regressions (OFBIZ-13555) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1888">PR1888</a></li>
+    <li> Fixed: voidPayment throws on a non-invoice payment application (OFBIZ-13560) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1894">PR1894</a></li>
+    <li> Fixed: lookupParty crashes on empty search criteria (OFBIZ-13556) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1892">PR1892</a></li>
+    <li> Improved: javadoc no longer depends on docs.groovy-lang.org at build time (OFBIZ-13566) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1896">PR1896</a></li>
+    <li> Fixed: DataServices content-upload and data-resource regressions (OFBIZ-13562) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1898">PR1898</a></li>
+    <li> Fixed: duplicateCategoryEntities throws GroovyCastException (OFBIZ-13563) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1901">PR1901</a></li>
+    <li> Fixed: createQuoteFromCart duplicates QuoteAdjustment records (OFBIZ-13525) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1904">PR1904</a></li>
+    <li> Fixed: Quote service permission checks don't match original design (OFBIZ-13526) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1906">PR1906</a></li>
+    <li> Fixed: productPriceGenericPermission ignores its own sub-check result (OFBIZ-13538) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1908">PR1908</a></li>
+    <li> Fixed: Party permission-check helper methods use incorrect logic (OFBIZ-13541) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1911">PR1911</a></li>
+    <li> Fixed: straightLineDepreciation uses wrong field for elapsed years (OFBIZ-13524) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1913">PR1913</a></li>
+    <li> Fixed: findCustomTimePeriods thruDate boundary and exclude flag (OFBIZ-13527) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1915">PR1915</a></li>
+    <li> Fixed: getFXConversion fails instead of defaulting to 1 when no rate configured (OFBIZ-13531) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1917">PR1917</a></li>
+    <li> Fixed: hasValidStateProvince returns String but declared Map (OFBIZ-13533) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1919">PR1919</a></li>
+    <li> Fixed: PartyServices contact-lookup and role-hierarchy regressions (OFBIZ-13534) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1922">PR1922</a></li>
+    <li> Fixed: Correct portlet sequence drag and drop boundaries and calculation (OFBIZ-13528) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1924">PR1924</a></li>
+    <li> Fixed: convertUom custom parameters and rounding regressions (OFBIZ-13530) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1932">PR1932</a></li>
+    <li> Fixed: filterRateAmountList sequential filtering and fallback behavior (OFBIZ-13543) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1934">PR1934</a></li>
+    <li> Fixed: createMissingCategoryAndProductAltUrls default parameter handling (OFBIZ-13539) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1936">PR1936</a></li>
+    <li> Fixed: createLead person creation guard for company-only leads (OFBIZ-13549) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1938">PR1938</a></li>
+    <li> Fixed: getProductRouting virtual product variant date filtering (OFBIZ-13550) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1940">PR1940</a></li>
+    <li> Fixed: getSystemInfoStatus open communication events condition (OFBIZ-13551) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1942">PR1942</a></li>
+    <li> Fixed: sendOrderDeliveryScheduleNotification malformed from address (OFBIZ-13552) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1944">PR1944</a></li>
+    <li> Fixed: applyFeatureToProductFromTypeAndCode sequenceNum mutation (OFBIZ-13554) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1947">PR1947</a></li>
+    <li> Fixed: updateBudgetStatus silent success on invalid status transitions (OFBIZ-13558) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1949">PR1949</a></li>
+    <li> Fixed: copyAgreement silent success when agreement does not exist (OFBIZ-13559) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1951">PR1951</a></li>
+    <li> Fixed: createFacilityLocation locationSeqId collision fallback regression (OFBIZ-13557) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1953">PR1953</a></li>
+    <li> Fixed: PortalPageMethods portlet attribute saving and page copying regressions (OFBIZ-13568) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1955">PR1955</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in InvoiceServicesScript (OFBIZ-13569) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1957">PR1957</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in CommonServicesScript (OFBIZ-13570) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1959">PR1959</a></li>
+    <li> Fixed: error in creating category image content. (OFBIZ-12011) by @rehan3586 in <a href="https://github.com/apache/ofbiz-framework/pull/1695">PR1695</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in QuoteServicesScript (OFBIZ-13571) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1961">PR1961</a></li>
+    <li> Fixed: MiniLang to Groovy conversion issues in ContactMechServicesScript (OFBIZ-13572) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1964">PR1964</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in InvoiceServicesScript (OFBIZ-13575) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1970">PR1970</a></li>
+    <li> Fixed: updateBudgetStatus invalid-transition error omits the requested status (OFBIZ-13558) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1972">PR1972</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in ProductStoreServices (OFBIZ-13576) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1975">PR1975</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in InventoryIssueServices (OFBIZ-13577) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1977">PR1977</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in ShoppingListServicesScript (OFBIZ-13579) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1979">PR1979</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in PortalPageServices (OFBIZ-13580) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1981">PR1981</a></li>
+    <li> Fixed: Mini-lang to Groovy regressions in EmailServicesScript (OFBIZ-13581) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1983">PR1983</a></li>
+    <li> Fixed: Timing-dependent deadlock-retry test in service engine (OFBIZ-13585) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1989">PR1989</a></li>
+    <li> Fixed: updateContentPermission grants UPDATE via ancestor ownership without an ownership change request (OFBIZ-13592) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1997">PR1997</a></li>
+    <li> Fixed: Six regressions in the minilang-to-Groovy conversion of PaymentServices.groovy (OFBIZ-13596) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/1999">PR1999</a></li>
+    <li> Fixed: createEmailAddress and updateEmailAddress accept blank email addresses (OFBIZ-13582) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2002">PR2002</a></li>
+    <li> Fixed: Two regressions in the minilang-to-Groovy conversion of CommonServicesScript.groovy (OFBIZ-13583) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2004">PR2004</a></li>
+    <li> Fixed: createUpdateBillingAddressAndPaymentMethod throws NPE for anonymous checkout (OFBIZ-13584) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2007">PR2007</a></li>
+    <li> Fixed: updatePartyRate does not persist expiry of the previous rate (OFBIZ-13590) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2013">PR2013</a></li>
+    <li> Fixed: Two regressions in the minilang-to-Groovy conversion of ContentServicesScript.groovy (OFBIZ-13589) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2009">PR2009</a></li>
+    <li> Fixed: setCommEventRoleToRead and setCommunicationEventRoleStatus throw NPE when no role exists (OFBIZ-13591) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2016">PR2016</a></li>
+    <li> Fixed: Four regressions in the minilang-to-Groovy conversion of PartyServicesScript.groovy (OFBIZ-13593) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2019">PR2019</a></li>
+    <li> Fixed: getLastSystemInfoNote off-by-one on note 2 and note 3 thresholds (OFBIZ-13586) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2021">PR2021</a></li>
+    <li> Fixed: checkInvoiceStatusInProgress loses its specific error messages (OFBIZ-13587) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2023">PR2023</a></li>
+    <li> Fixed: setPortalPortletAttributes doesn't clean up blank attribute values (OFBIZ-13588) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2027">PR2027</a></li>
+    <li> Fixed: updatePartyInvitation silently no-ops on a nonexistent record (OFBIZ-13594) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2030">PR2030</a></li>
+    <li> Fixed: accAndDecPartyInvitationPermissionCheck shows the wrong error message on an identity mismatch (OFBIZ-13595) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2032">PR2032</a></li>
+    <li> Fixed: Two regressions in saveExtFileDataResource's handling of a missing DataResource (OFBIZ-13597) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2034">PR2034</a></li>
+    <li> Fixed: Three regressions in the minilang-to-Groovy conversion of PaymentServices.groovy (OFBIZ-13600) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2052">PR2052</a></li>
+    <li> Fixed: Multiple regressions and one pre-existing bug in WorkEffortServicesScript.groovy (OFBIZ-13601) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2054">PR2054</a></li>
+    <li> Fixed: visualThemePermissionCheck() checks a permission ID that doesn't exist (OFBIZ-13602) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2057">PR2057</a></li>
+    <li> Fixed: createFuturePeriod() crashes with NullPointerException when CustomTimePeriod SystemProperty config is missing (OFBIZ-13604) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2061">PR2061</a></li>
+    <li> Fixed: AdminServer no longer starts without a configured admin key by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2067">PR2067</a></li>
+    <li> Fixed: ViewFile no longer discloses arbitrary properties or xml files by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2080">PR2080</a></li>
+    <li> Improved: moveContentJson lets a caller without UPDATE permission re-parent content associations by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2065">PR2065</a></li>
+    <li> Fixed: createReturnItem() does not cap returnPrice to returnablePrice for non-privileged callers by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2083">PR2083</a></li>
+    <li> Improved: deleteContentJson lets a caller without DELETE permission detach content and cascade-delete its alias subtree by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2100">PR2100</a></li>
+    <li> Fixed: quickReturnFromOrder() permission guard is a no-op due to an operator-precedence error by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2102">PR2102</a></li>
+    <li> Fixed: PBKDF2 password verification always fails in HashCrypt.doComparePbkdf2 (OFBIZ-13609) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2104">PR2104</a></li>
+    <li> Fixed: Two regressions in the minilang-to-Groovy conversion of CommonServicesScript.groovy (OFBIZ-13610) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2106">PR2106</a></li>
+    <li> Fixed: Three regressions in the minilang-to-Groovy conversion of PortalPageServices.groovy (OFBIZ-13611) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2108">PR2108</a></li>
+    <li> Fixed: HashCrypt compares non-PBKDF2 password hashes with variable-time String.equals() (OFBIZ-13615) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2110">PR2110</a></li>
+    <li> Fixed: Regression in the minilang-to-Groovy conversion of ProductStoreServices.groovy (OFBIZ-13613) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2114">PR2114</a></li>
+    <li> Fixed: Regression in the minilang-to-Groovy conversion of ContactMechServicesScript.groovy (OFBIZ-13612) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2112">PR2112</a></li>
+    <li> Fixed: Regression in the minilang-to-Groovy conversion of InventoryIssueServices.groovy (OFBIZ-13614) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2116">PR2116</a></li>
+    <li> Fixed: Two regressions in the minilang-to-Groovy conversion of PriceServicesScript.groovy (OFBIZ-13616) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2118">PR2118</a></li>
+    <li> Fixed: DELETE statements built from EntityCondition inlined values as SQL literals instead of binding them (OFBIZ-13620) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2120">PR2120</a></li>
+    <li> Fixed: Three regressions in the minilang-to-Groovy conversion of CostServices.groovy (OFBIZ-13617) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2122">PR2122</a></li>
+    <li> Fixed: Two regressions in the minilang-to-Groovy conversion of ProductionRunServicesScript.groovy (OFBIZ-13618) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2124">PR2124</a></li>
+    <li> Fixed: Regressions in the minilang-to-Groovy conversion of OrderReturnServicesScript.groovy (OFBIZ-13619) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2126">PR2126</a></li>
+    <li> Backport pr 2062 - Fix path interpretation for windows machines (#2062) by @Criux in <a href="https://github.com/apache/ofbiz-framework/pull/2127">PR2127</a></li>
+    <li> Fixed: Six regressions in the minilang-to-Groovy conversion of ProductServicesScript.groovy (OFBIZ-13621) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2144">PR2144</a></li>
+    <li> Fixed: Two regressions in the minilang-to-Groovy conversion of ContentServicesScript.groovy (OFBIZ-13622) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2146">PR2146</a></li>
+    <li> Fixed: Two missing null-guards in CommunicationEventServicesScript.groovy (OFBIZ-13623) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2152">PR2152</a></li>
+    <li> Fixed: getBlogEntry() only returns templateDataResourceId for posts with an image (OFBIZ-13624) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2154">PR2154</a></li>
+    <li> Fixed: uploadProductImages() silently drops every image after the first populated slot (OFBIZ-13625) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2156">PR2156</a></li>
+    <li> Fixed: viewContentPermission() never propagates roleEntity/roleEntityField (OFBIZ-13626) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2158">PR2158</a></li>
+    <li> Fixed: followPartyRelationshipsInline() silently returns zero relationships instead of unrestricted (OFBIZ-13627) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2160">PR2160</a></li>
+    <li> Improved: Resolve component: locations with ComponentLocationResolver in CommonEvents.openSourceFile and make ComponentConfig.getComponentConfig(String) lookup-only (OFBIZ-13629) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2165">PR2165</a></li>
+    <li> Improved: Remove the unused FoPrintServerEvents (OFBIZ-13631) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2170">PR2170</a></li>
+    <li> Improved: Build Java explicitly with Gradle in the CodeQL workflow by @jacopoc in <a href="https://github.com/apache/ofbiz-framework/pull/2174">PR2174</a></li>
+    <li> Improved: Return the validated file from SecurityUtil.checkOfbizFileAllowList and use it for the file access (OFBIZ-13632) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2172">PR2172</a></li>
+    <li> Backport: Fix webtools ProgramExport, Cache Maintenance and Thread List; normalise the ProgramExport pattern list (#1845) by @Criux in <a href="https://github.com/apache/ofbiz-framework/pull/2175">PR2175</a></li>
+    <li> Improved: Always protect FileUtil.unzipFileToFolder against zip slip (OFBIZ-13633) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2181">PR2181</a></li>
+    <li> Improved: Remove the accept-all hostname verifier option from SSLUtil and HttpClient (OFBIZ-13634) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2183">PR2183</a></li>
+    <li> Improved: Remove the unused UtilHttp.getAllowAllHttpClient (OFBIZ-13635) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2185">PR2185</a></li>
+    <li> Improved: Use SecureRandom to generate promo codes, captcha codes and generated IDs (OFBIZ-13636) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2187">PR2187</a></li>
+    <li> Improved: SafeObjectInputStream allowList matches class names as substrings and ships with unescaped dots (OFBIZ-13637) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2189">PR2189</a></li>
+    <li> Fixed: Do not evaluate the expand/collapse link of tree widgets as an expression (OFBIZ-13639) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2192">PR2192</a></li>
+    <li> Fixed: Do not evaluate a request parameter as an expression in the return-user-message from-field (OFBIZ-13640) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2194">PR2194</a></li>
+    <li> Fixed: Do not evaluate the Ajax update area string of forms twice as an expression (OFBIZ-13641) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2196">PR2196</a></li>
+    <li> Fixed: Do not evaluate the values of the callback token of forms as expressions (OFBIZ-13642) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2199">PR2199</a></li>
+    <li> Fixed: Do not evaluate the area id and target of the Ajax update areas of forms twice as an expression (OFBIZ-13643) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2201">PR2201</a></li>
+    <li> Improved: Keep the area id and target of the update areas of forms as expressions (OFBIZ-13644) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2203">PR2203</a></li>
+    <li> Fixed: Keep the redirection of a path alias to its aliasTo on the web site (OFBIZ-13645) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2205">PR2205</a></li>
+    <li> Improved: Grant the packages write permission of the docker image workflow to its job (OFBIZ-13646) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2207">PR2207</a></li>
+    <li> Fixed: Enforce the allowed types of the XStream deserialization in UtilXml (OFBIZ-13647) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2209">PR2209</a></li>
+    <li> Improved: added a rotateSecretKeys Gradle task to unconditionally replace an already-set JWT/password secret key by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2091">PR2091</a></li>
+    <li> Fixed: Escape the backslash and the braces in the macro strings of the menu, tree and form renderers (OFBIZ-13649) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2220">PR2220</a></li>
+    <li> Improved: Strip the control characters from the Location header of the redirects of RequestHandler and of the SEO forward filters (OFBIZ-13650) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2222">PR2222</a></li>
+    <li> Fixed: Reject untrusted certificates in MultiTrustManager when the all-trusted properties are missing or empty (OFBIZ-13654) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2230">PR2230</a></li>
+    <li> Fixed: Navigate Accounts fails with a NullPointerException when no glAccountId is given (OFBIZ-13651) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2227">PR2227</a></li>
+    <li> Fixed: Call to non-existing method in production run PDF reports (OFBIZ-13504) [release24.09] by @toaditi in <a href="https://github.com/apache/ofbiz-framework/pull/1828">PR1828</a></li>
+    <li> Fixed: Do not request the non-existent jquery-validation messages_en.js on every page (OFBIZ-13652) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2228">PR2228</a></li>
+    <li> Fixed: Remove the unused viewprofile request of the accounting webapp, which fails with an error page (OFBIZ-13653) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2229">PR2229</a></li>
+    <li> Fixed: The phone extension entered when creating an SFA account or lead is silently dropped (OFBIZ-13657) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2234">PR2234</a></li>
+    <li> Fixed: Converted Groovy scripts read configuration with UtilProperties, ignoring SystemProperty overrides the original mini-lang honoured (OFBIZ-13655) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2236">PR2236</a></li>
+    <li> Fix: Adds missing CREATE and UPDATE accounting permissions by @Lukas-Finster in <a href="https://github.com/apache/ofbiz-framework/pull/2211">PR2211</a></li>
+    <li> Fixed: Hardens security by adding missing permission check in by @Lukas-Finster in <a href="https://github.com/apache/ofbiz-framework/pull/2218">PR2218</a></li>
+    <li> Fixed: Regressions in CategoryServicesScript.groovy introduced by the mini-lang conversion (OFBIZ-13659) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2242">PR2242</a></li>
+    <li> Fixed: Regressions in ShipmentServices.groovy introduced by the mini-lang conversion (OFBIZ-13661) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2246">PR2246</a></li>
+    <li> Fixed: Regressions in QuoteServicesScript.groovy introduced by the mini-lang conversion (OFBIZ-13660) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2244">PR2244</a></li>
+    <li> Fixed: Regressions in ShoppingListServicesScript.groovy introduced by the mini-lang conversion (OFBIZ-13662) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2250">PR2250</a></li>
+    <li> Fixed: getOrderedSummaryInformation ignores explicit fromDate and thruDate (OFBIZ-13664) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2254">PR2254</a></li>
+    <li> Fixed: Promo conditions PPIP_ORST_YEAR and PPIP_ORST_LAST_YEAR read the order sub-total from the wrong map (OFBIZ-13667) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2256">PR2256</a></li>
+    <li> Fixed: Anonymous ecommerce checkout accepts an arbitrary partyId and lets it be used to overwrite another party's name and attach caller-supplied contact and payment data to that party (OFBIZ-13669) by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2264">PR2264</a></li>
+    <li> Improved: Validate the InventoryItem and the issued quantity in the issueInventoryItemToShipment service by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2238">PR2238</a></li>
+    <li> Fixed: Enforces order-update authorization in updateOrderPaymentPreference by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2258">PR2258</a></li>
+    <li> Fixed: createReturnItem() does not verify OrderItem ownership before attaching it to a ReturnHeader by @mridulpathak in <a href="https://github.com/apache/ofbiz-framework/pull/2271">PR2271</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
